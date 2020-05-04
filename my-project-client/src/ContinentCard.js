@@ -5,8 +5,10 @@ class ContinentCard extends Component {
 
     state = {
         countries : [this.props.continent.countries],
-        visible : false
+        visible : false,
     }
+
+    
 
     toggleState = () => {
         if(this.state.visible === false){
@@ -17,12 +19,13 @@ class ContinentCard extends Component {
     }
         
     render() {
+        
     return (
         <div >
             <p onClick={() => this.toggleState() }>{this.props.continent.name}</p>
             { this.state.visible ? <CountryCard country={this.state.countries[0]}/> : null }
         </div>
-    )
+        )
     }
 }
 
