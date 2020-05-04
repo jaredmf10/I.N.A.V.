@@ -1,13 +1,24 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 class CountryCard extends Component {
+    state = {
+        destinations : []
+    }
+
+    componentDidMount(){
+        fetch('http://localhost:3000/destinations')
+        .then(res => res.json())
+        .then(destinations => this.setState({destinations}))
+    }
     
     render() {
+        let filter = this.state.destinations.filter(destination=> destination.country === this.props.country.name)
         
         return (
             <div>
                 { this.props.country.map((country) => {
-		return <p key={country.id}> {country.name} </p>})
+		return <li key={country.id}> <Link to={`/${country.name}`}>{country.name}</Link></li>})
 	    }
             </div>
         )
