@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
 
-class USA extends Component {
+class Italy extends Component {
   state = {
-    name : "USA",
+    name : "Italy",
     destinations : []
   }
 
@@ -19,7 +19,7 @@ class USA extends Component {
     return (
       <div>
         <Navbar/>
-        <h1>USA</h1>
+        <h1>Italy</h1>
         { filter.map((destination) => {
           return <div key={destination.id}>
             <li> {destination.name} </li>
@@ -31,4 +31,4 @@ class USA extends Component {
   }
 }
 
-export default USA
+export default Italy

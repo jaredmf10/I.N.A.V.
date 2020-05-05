@@ -13,8 +13,7 @@ class CountryCard extends Component {
     }
     
     render() {
-        let filter = this.state.destinations.filter(destination=> destination.country === this.props.country.name)
-        
+    
         return (
             <div>
                 { this.props.country.map((country) => {
