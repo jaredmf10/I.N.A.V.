@@ -14,7 +14,8 @@ code {
 }
 
 .MapView {
-  padding-top: 40vh;
+  padding-top: 35vh;
+  padding-left: 20vh;
   display: grid;
   grid: 150px / auto auto auto;
   height: 100vh;
@@ -25,5 +26,31 @@ code {
 }
 
 .continent {
+  text-align: center;
+}
+
+.Europe {
+  padding-right: 25vh;
+}
+
+.Asia {
+  padding-right: 35vh;
+}
+
+.Oceania {
+  padding-top: 28vh;
+  padding-left: 10vh;
+}
+
+.South_America {
+  padding-top: 16vh;
+  padding-left: 22vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
   text-align: center;
 }
