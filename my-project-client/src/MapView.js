@@ -1,25 +1,36 @@
 import React, { Component } from 'react'
 import ContinentCard from './ContinentCard'
+// import { Container, Button, Image, Grid } from 'semantic-ui-react'
 
 class MapView extends Component {
 
     state = {
-        continents: [{name: "North America", id:1, countries:[{name:"USA", id:1}, {name:"Canada", id:2}, {name:"Mexico", id:3}]}, 
-        {name:"South America", id:2, countries:[{name:"Brazil", id:4}, {name:"Peru", id:5}, {name:"Argentina", id:6}]},
-        {name:"Europe", id:3, countries:[{name:"England", id:7}, {name:"France", id:8}, {name:"Italy", id:9}]}, 
-        {name:"Africa", id:4, countries:[{name:"Egypt", id:10}, {name:"Tanzania", id:11}, {name:"SouthAfrica", id:12}]}, 
-        {name:"Asia", id:5, countries:[{name:"China", id:13}, {name:"Japan", id:14}, {name:"India", id:15}]}, 
-        {name:"Oceania", id:6, countries:[{name:"Australia", id:16}, {name:"NewZealand", id:17}]}]
+        current: "all"
     }
 
+    //changes state according to the continent currently clicked
+    //state determines which map and country is rendered
+    onClick = name => {
+        this.setState({ current: name })
+    }
+
+    renderContinentCard = () => {
+        return (
+            <>
+                {Object.keys(this.props.continents).map((continent, indx) => {
+                    return <ContinentCard key={indx} onClick={this.onClick} name={continent} continent={this.props.continents[continent]} />
+                })}
+            </>
+        )
+    }
 
     render() {
+        // console.log(this.state)
+        // console.log(this.props.continents)
         return (
-        <div className="MapView">
-        { this.state.continents.map((continent) => {
-		return <ContinentCard continent={continent} key={continent.id}/>})
-	    }
-        </div>
+            <div className="MapView">
+                {this.props.continents ? this.renderContinentCard() : null}
+            </div>
         )
     }
 }

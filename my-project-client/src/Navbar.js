@@ -7,6 +7,7 @@ class Navbar extends Component {
         return (
             
         <div className="Navbar">
+           
            <h1><Link to="/">I.N.A.V.</Link></h1>
            <h2>Profile</h2>
         </div>
