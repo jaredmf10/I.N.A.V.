@@ -7,7 +7,7 @@ class CountryCard extends Component {
     }
     
     render() {
-    console.log(this.props.name)
+    // console.log(this.props.name)
         return (
             <div>
                 { <li> <Link to={`/${this.props.name}`}>{this.props.name}</Link></li>}

@@ -5,16 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .MapView {
-  padding-top: 40vh;
+  padding-top: 35vh;
+  padding-left: 20vh;
   display: grid;
   grid: 150px / auto auto auto;
   height: 100vh;
@@ -23,7 +21,26 @@ code {
   background-size: cover;
   background-image: url("https://www.conceptdraw.com/How-To-Guide/picture/example-world-map-outline.png")
 }
-
 .continent {
+  text-align: center;
+}
+.Europe {
+  padding-right: 25vh;
+}
+.Asia {
+  padding-right: 35vh;
+}
+.Oceania {
+  padding-top: 28vh;
+  padding-left: 10vh;
+}
+.South_America {
+  padding-top: 16vh;
+  padding-left: 22vh;
+}
+h1 {
+  text-align: center;
+}
+h2 {
   text-align: center;
 }
