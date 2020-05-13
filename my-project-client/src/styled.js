@@ -8,4 +8,5 @@ export const NavRow = styled.div`
     justify-content: space-between;
     > div {
         flex-basis: 10%;
-    }`
+    }
+`

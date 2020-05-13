@@ -5,20 +5,12 @@ class CountryCard extends Component {
     state = {
         destinations : []
     }
-
-    componentDidMount(){
-        fetch('http://localhost:3000/destinations')
-        .then(res => res.json())
-        .then(destinations => this.setState({destinations}))
-    }
     
     render() {
-    
+    // console.log(this.props.name)
         return (
             <div>
-                { this.props.country.map((country) => {
-		return <li key={country.id}> <Link to={`/${country.name}`}>{country.name}</Link></li>})
-	    }
+                { <li> <Link to={`/${this.props.name}`}>{this.props.name}</Link></li>}
             </div>
         )
     }
